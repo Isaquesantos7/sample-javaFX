@@ -1,6 +1,15 @@
 # Compiled class file
 *.class
 
+# build folders 
+bin/ 
+target/ 
+nbproject/private/ 
+build/ 
+nbbuild/ 
+dist/ 
+nbdist/ 
+
 # Log file
 *.log
 
