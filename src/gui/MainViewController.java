@@ -34,7 +34,7 @@ public class MainViewController implements Initializable{
 	
 	@FXML
 	private void onMenuItemDepartmentAction() {
-		System.out.println("onMenuItemDepartment!");
+		loadView("/gui/DepartmentList.fxml");;
 	}
 	
 	@FXML
@@ -46,6 +46,7 @@ public class MainViewController implements Initializable{
 	public void initialize(URL uri, ResourceBundle rb) {	
 	}
 	
+	/*inicializa um tela dentro da tela principal*/
 	private synchronized void loadView(String absoluteName) {
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource(absoluteName));
