@@ -8,9 +8,17 @@ import model.model.dao.DepartmentDao;
 
 public class DepartmentService {
 	private DepartmentDao dao = DaoFactory.createDepartmentDaoJDBC();
-	
-	public List<Department> findAll(){
+
+	public List<Department> findAll() {
 		List<Department> list = dao.findAll();
 		return list;
+	}
+
+	public void saveOrUpdate(Department obj) {
+		if (obj.getId() == null) {
+			dao.insert(obj);
+		} else {
+			dao.updateById(obj, obj.getId());
+		}
 	}
 }
