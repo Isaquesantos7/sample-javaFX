@@ -8,10 +8,10 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import model.db.DB;
+import model.db.DBException;
+import model.db.DbIntegrityException;
 import model.entities.Department;
-import model.model.DB;
-import model.model.DBException;
-import model.model.DBIntegrityException;
 import model.model.dao.DepartmentDao;
 
 public class DepartmentDaoJDBC implements DepartmentDao {
@@ -85,7 +85,7 @@ public class DepartmentDaoJDBC implements DepartmentDao {
 				System.out.println("No was deleted!");
 			}
 		} catch (SQLException e) {
-			throw new DBIntegrityException("Error: " + e.getStackTrace());
+			throw new DbIntegrityException("Error: " + e.getStackTrace());
 		} finally {
 			DB.closeStatement(st);
 		}

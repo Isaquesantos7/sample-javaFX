@@ -9,10 +9,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import model.db.DB;
+import model.db.DBException;
 import model.entities.Department;
 import model.entities.Seller;
-import model.model.DB;
-import model.model.DBException;
 import model.model.dao.SellerDao;
 
 public class SellerDaoJDBC implements SellerDao {
